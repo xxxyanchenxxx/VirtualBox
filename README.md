@@ -15,7 +15,7 @@ VirtualBox在你的App内创建一个`虚拟空间`，你可以在虚拟空间�
 
 警告
 -------
-本项目使用的 [VirtualApp](https://github.com/asLody/VirtualApp) 不允许用于商业用途，并且其内部的 VirtualApp 版本已经过时，如果有这个需求，为了贵公司的长期稳定发展，请使用商业授权，联系 Lody (imlody@foxmail.com)即可。
+本项目使用的[VirtualApp](https://github.com/asLody/VirtualApp)开源版本已经过时，如果有需求，为了贵公司的长期稳定发展，请使用Virtual App商业版，联系Lody(imlody@foxmail.com)即可。
 
 
 修改声明
