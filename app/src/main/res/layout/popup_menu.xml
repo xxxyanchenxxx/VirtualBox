@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:background="@drawable/bg_dialog"
+    android:orientation="vertical"
+    android:layout_gravity="center">
+    <TextView
+        android:id="@+id/ly_item1"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:textColor="#595d5f"
+        android:text="分身设置" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="#eeeeee" />
+    <TextView
+        android:id="@+id/ly_item2"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:textColor="#595d5f"
+        android:text="分身多开" />
+    <View
+        android:id="@+id/multi_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="#eeeeee" />
+    <TextView
+        android:id="@+id/ly_item3"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:textColor="#595d5f"
+        android:text="修改名称" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="#eeeeee" />
+    <TextView
+        android:id="@+id/ly_item4"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:textColor="#595d5f"
+        android:text="添加至桌面" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="#eeeeee" />
+    <TextView
+        android:id="@+id/ly_item5"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:textColor="#595d5f"
+        android:text="删除分身" />
+</LinearLayout>

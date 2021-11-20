@@ -1,0 +1,54 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply from: 'config.gradle'
+
+buildscript {
+    ext.kotlin_version = '1.4.31'
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()
+        maven { url "https://maven.google.com/" }
+        maven { url 'https://dl.bintray.com/umsdk/release' }
+        maven { url 'https://repo1.maven.org/maven2/' }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.3'
+        classpath 'com.android.tools.build:gradle-experimental:0.11.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()
+        maven {
+            url "https://jitpack.io"
+        }
+        maven { url "https://maven.google.com/" }
+        maven { url "http://objectbox.net/beta-repo/" }
+        maven { url 'https://dl.bintray.com/umsdk/release' }
+        maven { url 'https://repo1.maven.org/maven2/' }
+
+        // 支付宝 SDK AAR 包所需的配置
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    versions = [
+            okhttp                 : "3.10.0",
+            gsonVersion            : "2.8.5",
+            constraintlayoutVewrion: "1.1.3",
+            recyclerview           : "1.1.0",
+            appcompatVersion       : "1.1.0",
+            sevenZip               : "1.2.17"
+    ]
+}

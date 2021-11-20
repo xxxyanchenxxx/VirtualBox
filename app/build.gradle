@@ -1,0 +1,122 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "28.0.3"
+
+    defaultConfig {
+        applicationId rootProject.ext.PACKAGE_NAME_32BIT
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionName "1.0.0"
+        versionCode 100
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+        buildConfigField 'String', 'PACKAGE_NAME_ARM64', '"' + rootProject.ext.PACKAGE_NAME_ARM64 + '"'
+        manifestPlaceholders = [
+                PACKAGE_NAME_32BIT: rootProject.ext.PACKAGE_NAME_32BIT,
+                PACKAGE_NAME_ARM64: rootProject.ext.PACKAGE_NAME_ARM64
+        ]
+        ndk {
+            abiFilters "armeabi-v7a"
+        }
+    }
+
+    aaptOptions {
+        noCompress "dat", "bin", "pak"
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("./keystore/xapp.keystore")
+            storePassword 'M22jSsw31rxqraSG'
+            keyAlias 'vbox'
+            keyPassword 'M22jSsw31rxqraSG'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro', 'vb-proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            zipAlignEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro', 'vb-proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    useLibrary 'org.apache.http.legacy'
+}
+
+android {
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':lib')
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    //Android Lib
+    implementation "androidx.appcompat:appcompat:1.3.1"
+    implementation "androidx.constraintlayout:constraintlayout:2.1.1"
+    implementation "androidx.recyclerview:recyclerview:1.2.1"
+    implementation "com.google.android.material:material:1.4.0"
+    implementation "androidx.cardview:cardview:1.0.0"
+    implementation "androidx.legacy:legacy-support-v4:1.0.0"
+    implementation 'androidx.annotation:annotation:1.3.0'
+
+    // ThirdParty
+    implementation 'com.jonathanfinerty.once:once:1.0.3'
+    implementation 'com.jaeger.statusbarutil:library:1.5.1'
+    implementation 'com.melnykov:floatingactionbutton:1.3.0'
+
+    //rxJava
+    implementation("io.reactivex.rxjava2:rxjava:${rxjava2_version}") {
+        exclude group: 'com.android.support', module: 'appcompat-v7'
+    }
+    implementation("io.reactivex.rxjava2:rxandroid:${rxandroid_version}") {
+        exclude group: 'com.android.support', module: 'appcompat-v7'
+    }
+    implementation 'com.squareup.okio:okio:2.2.2'
+
+    implementation project(':libSwipeBack')
+
+    implementation 'com.github.promeg:tinypinyin:2.0.3'
+
+    implementation "com.google.code.gson:gson:2.8.6"
+
+    implementation "org.jdeferred.v2:jdeferred-android-aar:2.0.0"
+}

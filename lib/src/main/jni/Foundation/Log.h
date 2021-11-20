@@ -1,0 +1,30 @@
+//
+// VirtualApp Native Project
+//
+
+#ifndef VIRTUALAPP_LOG_H
+#define VIRTUALAPP_LOG_H
+
+#include <android/log.h>
+
+#define LOG_OPEN 0
+
+#define TAG "VB++"
+
+#if LOG_OPEN == 1
+
+#define ALOGI(...) __android_log_print(ANDROID_LOG_INFO, TAG ,__VA_ARGS__)
+#define ALOGD(...) __android_log_print(ANDROID_LOG_DEBUG, TAG ,__VA_ARGS__)
+#define ALOGW(...) __android_log_print(ANDROID_LOG_WARN, TAG ,__VA_ARGS__)
+#define ALOGE(...) __android_log_print(ANDROID_LOG_ERROR, TAG ,__VA_ARGS__)
+
+#else
+
+#define ALOGI(...) NULL
+#define ALOGD(...) NULL
+#define ALOGW(...) NULL
+#define ALOGE(...) NULL
+
+#endif
+
+#endif //VIRTUALAPP_LOG_H

@@ -1,0 +1,75 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="app_name">VirtualBox</string>
+    <string name="create_shortcut">快捷方式</string>
+    <string name="create_shortcut_tip">创建桌面图标，更快捷启动分身APP</string>
+    <string name="save">保存</string>
+    <string name="save_success">保存成功!</string>
+    <string name="about">关于我们</string>
+    <string name="clone_apps">添加应用</string>
+    <string name="help_improve">反馈</string>
+    <string name="app_detail">应用设置</string>
+
+    <string
+        name="monopoly_desc"><![CDATA[什么是独立分身：同时只开启一个分身，当启动另一个分身时，会自动结束其它分身，以节约内存，节省电量。]]></string>
+
+    <string name="service_privacy_policy"><u>用户协议与隐私政策</u></string>
+    <string name="service_use_policy"><u>用户协议与隐私政策</u></string>
+    <string name="save_video">保存本地</string>
+    <string name="delete_app">删除应用</string>
+    <string name="delete_app_msg">您是否想要删除%s?</string>
+    <string name="process_tip">处理中，请稍等…</string>
+    <string name="notice">提示</string>
+    <string name="tip_64">需要安装64位支持</string>
+    <string name="OK">确定</string>
+
+    <string name="opening">正在打开 %s… </string>
+    <string name="opening_tip">首次开启可能会耗费较长时间，请耐心等待…</string>
+    <string name="launch_spare">启动分身</string>
+
+    <string name="menu_mock_phone">机型模拟</string>
+    <string name="setting_app_launch">独立分身</string>
+
+    <string name="mock_none">真机信息</string>
+    <string name="mock_device">模拟中</string>
+    <string name="dlg_reset_device">重置为真实手机信息</string>
+
+    <string name="mock_phone_des">让您的手机模拟上百种机型</string>
+    <string name="plugin_action_times">点击设置倍率</string>
+    <string name="plugin_step_set_ok">开始模拟</string>
+    <string name="plugin_step_desc">倍率：走1步*倍率（比如100倍）= 走100步</string>
+
+    <string-array name="weeks">
+        <item>Sun</item>
+        <item>Mon</item>
+        <item>Tue</item>
+        <item>Wed</item>
+        <item>Thu</item>
+        <item>Fri</item>
+        <item>Sat</item>
+    </string-array>
+
+    <string name="agree_policy">同意并继续</string>
+    <string name="i_agree_policy">已阅读并同意上述协议</string>
+    <string name="app_polity_title">软件服务许可使用协议</string>
+
+    <string name="cancel">取消</string>
+    <string name="ensure">确定</string>
+    <string name="weixin">微信</string>
+    <string name="thanksforshare">分享好友</string>
+    <string name="qq">QQ</string>
+    <string name="other">其它</string>
+    <string name="user_id">user id: %s</string>
+    <string name="user_privacy_policy"><u>用户协议与隐私政策</u></string>
+
+    <string name="image_button_content_description">Change state of section</string>
+    <string name="reset">重置</string>
+    <string name="shortcut_name">快捷方式名称</string>
+    <string name="custom_app_name">设置名称</string>
+    <string name="shortcut_permission">权限设置</string>
+    <string name="shortcut_permission_tip">在手机系统设置中，打开\"VirtualBox\"\"创建桌面快捷方式\"权限，否则可能无法添加至桌面</string>
+    <string name="never_remind">下次不再提醒</string>
+    <string name="goto_set">去设置</string>
+    <string name="shortcut_success">成功添加</string>
+    <string name="tab_index">首页</string>
+    <string name="tab_me">我</string>
+</resources>

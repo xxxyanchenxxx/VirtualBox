@@ -1,0 +1,32 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="setting_row_margint">20dp</dimen>
+
+    <!--Card Stack-->
+    <dimen name="card_gap">60dp</dimen>
+    <dimen name="card_gap_bottom">5dp</dimen>
+    <dimen name="dp30">30dp</dimen>
+    <dimen name="dp8">8dp</dimen>
+    <dimen name="dp16">16dp</dimen>
+    <dimen name="dp24">24dp</dimen>
+
+    <!--Desktop-->
+    <dimen name="desktop_divider">7dp</dimen>
+    <dimen name="item_height">60dp</dimen>
+
+    <dimen name="dsrv_defaultHotspotHeight">56dp</dimen>
+    <dimen name="vip_item_margin_start">12dp</dimen>
+    <dimen name="setting_item_height">56dp</dimen>
+
+    <dimen name="section_text_size">18sp</dimen>
+    <dimen name="item_margin">3dp</dimen>
+
+    <dimen name="section_text_padding_left">16dp</dimen>
+
+    <!--quickslidebar-->
+    <dimen name="textSize_quicksidebar">14sp</dimen>
+    <dimen name="textSize_quicksidebar_choose">14sp</dimen>
+    <dimen name="textSize_quicksidebartips">12sp</dimen>
+    <dimen name="height_quicksidebartips">30dp</dimen>
+    <dimen name="height_quicksidebaritem">19dp</dimen>
+</resources>

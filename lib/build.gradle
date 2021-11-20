@@ -1,0 +1,42 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 30
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 30
+
+        buildConfigField 'String', 'VA_VERSION_NAME', '"V' + rootProject.ext.VERSION + '"'
+        manifestPlaceholders = [
+                PERMISSION_PREFIX:  rootProject.ext.PACKAGE_NAME_32BIT,
+                AUTHORITY_PREFIX :  rootProject.ext.PACKAGE_NAME_32BIT,
+        ]
+        externalNativeBuild {
+            ndkBuild {
+                arguments "APP_PLATFORM=android-19"
+                abiFilters "armeabi-v7a", "arm64-v8a"
+
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro', 'vlib-proguard-rules.pro'
+        }
+    }
+    externalNativeBuild {
+        ndkBuild {
+            path file("src/main/jni/Android.mk")
+        }
+    }
+    lintOptions {
+        //IJobService need NewApi
+        abortOnError false
+        warning 'NewApi', 'OnClick', 'EllipsizeMaxLines'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+}

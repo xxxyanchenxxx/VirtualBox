@@ -1,0 +1,2 @@
+include ':app', ':app-arm64', ':libSwipeBack'
+include ':lib'

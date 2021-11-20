@@ -1,0 +1,60 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "28.0.3"
+
+    defaultConfig {
+        applicationId rootProject.ext.PACKAGE_NAME_ARM64
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 101
+        versionName "1.0.1"
+        buildConfigField 'String', 'PACKAGE_NAME_32BIT',   "\"" + rootProject.ext.PACKAGE_NAME_32BIT + "\""
+        manifestPlaceholders = [
+                PERMISSION_PREFIX:  rootProject.ext.PERMISSION_PREFIX,
+                AUTHORITY64_PREFIX : rootProject.ext.AUTHORITY64_PREFIX,
+                PACKAGE_NAME_32BIT: rootProject.ext.PACKAGE_NAME_32BIT,
+                PACKAGE_NAME_ARM64: rootProject.ext.PACKAGE_NAME_ARM64
+        ]
+        ndk {
+            abiFilters "arm64-v8a"
+        }
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("./../app/keystore/xapp.keystore")
+            storePassword 'M22jSsw31rxqraSG'
+            keyAlias 'vbox'
+            keyPassword 'M22jSsw31rxqraSG'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro', 'vb-proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            minifyEnabled false
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro', 'vb-proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    implementation project(':lib')
+}

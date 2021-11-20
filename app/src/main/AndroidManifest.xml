@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ft.mapp">
+
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <!-- call phone -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+    <!-- sms-->
+    <uses-permission android:name="android.permission.RECEIVE_MMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_WAP_PUSH" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <!-- google app start -->
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH" />
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.OTHER_SERVICES" />
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.YouTubeUser" />
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+    <application
+        android:name="com.ft.mapp.VApp"
+        android:extractNativeLibs="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:resizeableActivity="true"
+        android:requestLegacyExternalStorage="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:extractNativeLibs"
+        tools:targetApi="n">
+
+        <activity
+            android:name="com.ft.mapp.splash.SplashActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            tools:ignore="LockedOrientationActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ft.mapp.home.BackHomeActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.ft.mapp.home.HomeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/UITheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.ft.mapp.home.ListAppActivity"
+            android:label="@string/clone_apps"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/UITheme"
+            tools:ignore="LockedOrientationActivity" />
+
+        <activity
+            android:name=".home.AppLaunchConfigActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/UITheme"
+            tools:ignore="LockedOrientationActivity" />
+
+        <activity
+            android:excludeFromRecents="true"
+            android:name="com.ft.mapp.open.ShortcutHandleActivity"
+            android:exported="true"
+            android:process="@string/engine_process_name"
+            android:taskAffinity="virtual.shortcut.task"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="${applicationId}.vbox.action.shortcut" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.ft.mapp.home.device.DeviceDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/UITheme"
+            tools:ignore="LockedOrientationActivity" />
+
+        <activity
+            android:name="com.ft.mapp.home.device.DeviceCustomActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/UITheme"
+            tools:ignore="LockedOrientationActivity" />
+
+        <activity
+            android:name="com.ft.mapp.home.AboutActivity"
+            android:label="@string/about"
+            android:screenOrientation="portrait"
+            android:theme="@style/UITheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.ft.mapp.home.AppDetailActivity"
+            android:label="@string/app_detail"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyleBottom"
+            tools:ignore="LockedOrientationActivity" />
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+
+</manifest>

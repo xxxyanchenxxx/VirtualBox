@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="honor">
+        <item>V30 PRO</item>
+        <item>V30</item>
+        <item>20S</item>
+        <item>Play3</item>
+        <item>20i</item>
+        <item>20 Pro</item>
+        <item>20</item>
+        <item>10</item>
+        <item>8X</item>
+        <item>8A</item>
+        <item>10 青春版</item>
+        <item>Note 10</item>
+        <item>8X MAX</item>
+        <item>Magic2</item>
+        <item>Play</item>
+        <item>9i</item>
+        <item>V10</item>
+        <item>V20</item>
+    </string-array>
+    <string-array name="huawei">
+        <item>Mate 30 Pro</item>
+        <item>Mate 30 Pro5G</item>
+        <item>Mate 30</item>
+        <item>Mate 30 5G</item>
+        <item>nova 5 Pro</item>
+        <item>nova 5</item>
+        <item>nova 5i</item>
+        <item>nova 5i Pro</item>
+        <item>nova 6 5G</item>
+        <item>畅享10Plus</item>
+        <item>Mate 30 RS保时捷版设计</item>
+        <item>P30</item>
+        <item>P30 pro</item>
+        <item>Mate 10</item>
+        <item>Mate 10 Pro</item>
+        <item>Mate 10 保时捷版</item>
+        <item>Mate 20</item>
+        <item>Mate 20 Pro</item>
+        <item>Mate 20 X</item>
+        <item>Mate 9 保时捷版</item>
+        <item>nova 4e</item>
+        <item>nova 4</item>
+        <item>P10</item>
+        <item>P10 Plus</item>
+        <item>P20</item>
+        <item>P20 Pro</item>
+        <item>RS 保时捷版</item>
+        <item>畅享9 Plus</item>
+    </string-array>
+    <string-array name="iphone">
+        <item>11 Pro</item>
+        <item>11</item>
+        <item>XS Max</item>
+        <item>XS</item>
+        <item>XR</item>
+        <item>X</item>
+        <item>8 Plus</item>
+        <item>8</item>
+        <item>7 Plus</item>
+        <item>7</item>
+        <item>6 Plus</item>
+        <item>6</item>
+    </string-array>
+    <string-array name="meizu">
+        <item>16s Pro</item>
+        <item>16s</item>
+        <item>16Xs</item>
+        <item>Note9</item>
+        <item>X8</item>
+        <item>16th</item>
+        <item>16th Plus</item>
+        <item>16X</item>
+        <item>V8</item>
+        <item>Note 8</item>
+        <item>15 Plus</item>
+        <item>15</item>
+        <item>E3</item>
+        <item>M15</item>
+        <item>6T</item>
+    </string-array>
+    <string-array name="nokia">
+        <item>9 PureView</item>
+        <item>8 Sirocco</item>
+        <item>7 Plus</item>
+        <item>7</item>
+        <item>X7</item>
+        <item>X6</item>
+        <item>6.1</item>
+        <item>6</item>
+        <item>X5</item>
+        <item>3.1 Plus</item>
+    </string-array>
+    <string-array name="oneplus">
+        <item>7T</item>
+        <item>7 Pro</item>
+        <item>7</item>
+        <item>6T</item>
+        <item>6</item>
+        <item>5T</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="oppo">
+        <item>Reno Ace</item>
+        <item>Reno 2</item>
+        <item>Reno3</item>
+        <item>Reno3 Pro</item>
+        <item>K5</item>
+        <item>A11x</item>
+        <item>R17</item>
+        <item>R17 Pro</item>
+        <item>K1</item>
+        <item>Find X</item>
+        <item>R15x</item>
+        <item>A7x</item>
+        <item>A5</item>
+        <item>A7</item>
+        <item>R11</item>
+        <item>Reno</item>
+        <item>Reno 10</item>
+        <item>Reno Z</item>
+        <item>A9x</item>
+        <item>A9</item>
+        <item>K3</item>
+    </string-array>
+    <string-array name="redmi">
+        <item>K30</item>
+        <item>K30 5G</item>
+        <item>8A</item>
+        <item>8</item>
+        <item>K20 Pro 尊享版</item>
+        <item>Note 8</item>
+        <item>Note 8 Pro</item>
+        <item>Note7</item>
+        <item>6A</item>
+        <item>6</item>
+        <item>Note5</item>
+    </string-array>
+    <string-array name="samsung">
+        <item>Galaxy Note 10</item>
+        <item>Galaxy Note 10+ 5G</item>
+        <item>Galaxy A80</item>
+        <item>Galaxy S10+</item>
+        <item>Galaxy S10</item>
+        <item>Galaxy S10e</item>
+        <item>Galaxy Note 9</item>
+        <item>Galaxy A8s</item>
+        <item>Galaxy A9s</item>
+        <item>Galaxy A6s</item>
+        <item>Galaxy S9</item>
+        <item>Galaxy S9+</item>
+        <item>Galaxy S8+</item>
+        <item>Galaxy Note 8</item>
+        <item>W2019</item>
+        <item>W2018</item>
+        <item>C9 Pro</item>
+        <item>C8</item>
+    </string-array>
+    <string-array name="vivo">
+        <item>NEX 3 5G</item>
+        <item>NEX 3</item>
+        <item>iQOO Pro</item>
+        <item>iQOO Neo</item>
+        <item>Y7s</item>
+        <item>NEX</item>
+        <item>X27</item>
+        <item>X27 pro</item>
+        <item>X23</item>
+        <item>X21s</item>
+        <item>X21</item>
+        <item>X20</item>
+        <item>S1</item>
+        <item>S1 pro</item>
+        <item>X20 Plus</item>
+        <item>X9s Plus</item>
+        <item>X9s</item>
+        <item>Z3</item>
+        <item>Z1</item>
+        <item>Z3x</item>
+        <item>Z5x</item>
+        <item>Y97</item>
+        <item>Y93</item>
+        <item>Y3</item>
+        <item>U1</item>
+        <item>iQOO</item>
+        <item>X Play6</item>
+        <item>X Play5</item>
+    </string-array>
+    <string-array name="xiaomi">
+        <item>MIX AIpha</item>
+        <item>9 Pro5G</item>
+        <item>CC9</item>
+        <item>CC9e</item>
+        <item>CC9 美图定制版</item>
+        <item>9</item>
+        <item>9 SE</item>
+        <item>Play</item>
+        <item>8 青春版</item>
+        <item>8 SE</item>
+        <item>6X</item>
+        <item>MIX 3</item>
+        <item>MAX 3</item>
+        <item>MIX 2S</item>
+        <item>黑鲨游戏手机</item>
+    </string-array>
+
+    <array name="quickSideBarLetters">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
+        <item>H</item>
+        <item>I</item>
+        <item>J</item>
+        <item>K</item>
+        <item>L</item>
+        <item>M</item>
+        <item>N</item>
+        <item>O</item>
+        <item>P</item>
+        <item>Q</item>
+        <item>R</item>
+        <item>S</item>
+        <item>T</item>
+        <item>U</item>
+        <item>V</item>
+        <item>W</item>
+        <item>X</item>
+        <item>Y</item>
+        <item>Z</item>
+        <item>#</item>
+    </array>
+</resources>

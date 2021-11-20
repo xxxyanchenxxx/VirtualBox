@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_app_detail"
+    >
+
+    <com.ft.mapp.widgets.ActionView
+        android:id="@+id/setting_action"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        app:icon_visible="false"
+        app:back_visible="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:text_color="@color/black"
+        app:title="@string/app_detail" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/plugin_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:overScrollMode="never"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/detail_launch"
+        app:layout_constraintTop_toBottomOf="@+id/setting_action" />
+
+    <Button
+        android:id="@+id/detail_launch"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:textSize="20sp"
+        android:text="@string/launch_spare"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@+id/plugin_recycler_view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/common_btn_rect"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="10dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
